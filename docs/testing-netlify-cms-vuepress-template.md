@@ -1,5 +1,5 @@
 ---
-title: Testing Netlify CMS VuePress Template
+title: Testing
 ---
 # Testing 123
 
