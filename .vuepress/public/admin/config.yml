@@ -1,5 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: skyfly200/Daniel-Vega-Site
+  branch: master
 
 public_folder: ".vuepress/dist/"
 media_folder: ".vuepress/dist/assets/img"
