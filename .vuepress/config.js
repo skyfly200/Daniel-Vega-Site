@@ -1,16 +1,15 @@
 module.exports = {
-    title: "VuePress Deploy",
+    title: "Daniel Vega",
     locales: {
         '/': {
-            lang: 'de-DE',
-            title: 'VuePress Deploy',
-            description: 'Vuepress with Netlify Deploy Button'
+            lang: 'en-EN',
+            title: 'Daniel Vega',
+            description: "Daniel Vega's Personal Website"
         }
     },
     head: [
         ['link', { rel: 'icon', href: `/logo.png` }],
         ['link', { rel: 'manifest', href: '/manifest.json' }],
-        ['link', { rel: 'canonical', href: 'https://vuepress-deploy.netlify.com' }],
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -20,24 +19,25 @@ module.exports = {
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     serviceWorker: true,
+    host: 'localhost',
     themeConfig: {
+        search: false,
         docsDir: 'docs',
-        repo: 'capriosa/vuepress-deploy',
-
         nav: [{
                 text: 'Start',
                 link: '/docs/',
             },
             {
-                text: 'Admin',
-                link: '/admin',
+                text: 'Test',
+                link: '/pages/test.html',
             },
             {
                 text: 'NetlifyCMS Config Help',
                 link: '/docs/netlifycms-configuration.html',
             }
-
-        ]
-
+        ],
+        serviceWorker: {
+          updatePopup: true
+        }
     }
 }

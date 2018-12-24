@@ -1,5 +1,7 @@
 ---
 title: NetlifyCMS
+prev: false
+next: false
 ---
 # NetlifyCMS
 

@@ -1,6 +1,8 @@
 ---
 sidebar: auto
 title: Markdown examples
+prev: false
+next: false
 ---
 # Markdown examples
 Edit on 30.04.2018 with NetlifyCMS
