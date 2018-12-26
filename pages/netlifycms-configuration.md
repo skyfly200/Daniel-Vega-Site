@@ -1,7 +1,6 @@
 ---
 title: NetlifyCMS
-prev: false
-next: false
+hideInMenu: true
 ---
 # NetlifyCMS
 

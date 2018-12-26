@@ -1,7 +1,6 @@
 ---
 title: Testing
-prev: false
-next: false
+hideInMenu: true
 ---
 # Testing 123
 
