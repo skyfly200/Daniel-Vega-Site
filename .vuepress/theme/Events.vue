@@ -1,26 +1,31 @@
 <template>
-    <div>
-        <div class="content">
-            <h1>{{ $page.frontmatter.title }}</h1>
-            <Content />
-        </div>
-        <div class="articles">
-            <article class="post section" v-for="event in events">
-                <h2 class="subtitle is-4">{{ event.title }}</h2>
-                <p>{{ event.frontmatter.excerpt }}</p>
-                <a :href="event.path">Read More →</a>
-            </article>
-        </div>
-    </div>
+  <div class="events-layout">
+    <Nav />
+    <v-content>
+      <v-container fluid>
+        <v-layout class="pa-4">
+          <h1>{{ $page.frontmatter.title }}</h1>
+          <Content />
+          <EventItem class="event section" v-for="event in events" />
+        </v-layout>
+      </v-container>
+    </v-content>
+  </div>
 </template>
 <script>
+import Nav from "./components/Nav"
+import EventItem from "./components/Event"
 export default {
-    computed: {
-        events() {
-            return this.$site.pages
-                .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
-                .sort((a, b) => Date.parse(b.frontmatter.datetime) - Date.parse(a.frontmatter.datetime));
-        }
-    }
+  components: {
+    Nav,
+    EventItem
+  },
+  computed: {
+      events() {
+          return this.$site.pages
+              .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
+              .sort((a, b) => Date.parse(b.frontmatter.datetime) - Date.parse(a.frontmatter.datetime));
+      }
+  }
 };
 </script>

@@ -1,26 +1,31 @@
 <template>
-    <div>
-        <div class="content">
-            <h1>{{ $page.frontmatter.title }}</h1>
-            <Content />
-        </div>
-        <div class="articles">
-            <article class="work section" v-for="work in works">
-                <h2 class="subtitle is-4">{{ work.title }}</h2>
-                <p>{{ work.frontmatter.excerpt }}</p>
-                <a :href="work.path">Read More →</a>
-            </article>
-        </div>
-    </div>
+  <div class="base-layout">
+    <Nav />
+    <v-content>
+      <v-container fluid>
+        <v-layout class="pa-4">
+          <h1>{{ $page.frontmatter.title }}</h1>
+          <Content />
+          <Work class="work section" v-for="work in works" />
+        </v-layout>
+      </v-container>
+    </v-content>
+  </div>
 </template>
 <script>
+import Nav from "./components/Nav"
+import Work from "./components/Work"
 export default {
-    computed: {
-        works() {
-            return this.$site.pages
-                .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
-                .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-        }
-    }
+  components: {
+    Nav,
+    Work
+  },
+  computed: {
+      works() {
+          return this.$site.pages
+              .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
+              .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+      }
+  }
 };
 </script>
