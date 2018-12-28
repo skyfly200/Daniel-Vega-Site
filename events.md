@@ -1,7 +1,7 @@
 ---
 pageClass: "events"
 title: "Events"
-menuIcon: "calendar"
+menuIcon: "calendar_today"
 ---
 
 # Upcoming Events
