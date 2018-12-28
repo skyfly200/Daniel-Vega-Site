@@ -71,3 +71,12 @@ collections:
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Date and Time", name: "datetime", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
