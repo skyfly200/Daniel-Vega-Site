@@ -12,7 +12,7 @@
 </template>
 <script>
 import Nav from "./components/Nav"
-import Event from "./components/Event"
+import EventItem from "./components/Event"
 export default {
   components: {
     Nav,
