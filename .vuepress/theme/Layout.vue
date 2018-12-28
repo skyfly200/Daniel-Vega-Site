@@ -4,7 +4,7 @@
     <Contact v-else-if="isContact"/>
     <Listen v-else-if="isListen" />
     <Events v-else-if="isEvents" />
-    <EventItem v-else-if="isEvent" />
+    <EventPage v-else-if="isEvent" />
     <Work v-else-if="isWork" />
     <Base v-else/>
     <v-footer app>
@@ -17,16 +17,17 @@
   import Contact from './Contact';
   import Events from './Events';
   import Listen from './Listen';
-  import Work from './Work';
+  import EventPage from './Event';
+  import WorkPage from './WorkPage';
   import Base from './Base';
-  import EventItem from './components/Event';
   export default {
       components: {
         Home,
         Contact,
         Events,
-        EventItem,
+        EventPage,
         Listen,
+        WorkPage,
         Base
       },
       computed: {
