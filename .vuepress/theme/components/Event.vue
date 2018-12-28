@@ -1,11 +1,15 @@
 <template>
   <v-card class="pa-4">
-    <h1> {{ $page.frontmatter.title }} </h1>
-    <Content />
+    <a :href="path">
+      <h1> {{ title }} </h1>
+    </a>
+    {{ frontmatter.body }}
   </v-card>
 </template>
 <script>
-export default {};
+export default {
+  props: ["frontmatter", "title", "path"]
+};
 </script>
 <style>
 </style>

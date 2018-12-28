@@ -4,9 +4,12 @@
     <v-content>
       <v-container fluid>
         <v-layout class="pa-4">
-          <h1>{{ $page.frontmatter.title }}</h1>
           <Content />
-          <EventItem class="event section" v-for="event in events" :key="event.title" />
+        </v-layout>
+        <v-layout class="pa-2" align-center justify-space-around row fill-height>
+          <v-flex v-for="e in events" :key="e.title" xs12 md4>
+            <EventItem class="event section" v-bind="e" />
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -22,9 +25,9 @@ export default {
   },
   computed: {
       events() {
-          return this.$site.pages
-              .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
-              .sort((a, b) => Date.parse(b.frontmatter.datetime) - Date.parse(a.frontmatter.datetime));
+        return this.$site.pages
+          .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
+          .sort((a, b) => Date.parse(b.frontmatter.datetime) - Date.parse(a.frontmatter.datetime));
       }
   }
 };

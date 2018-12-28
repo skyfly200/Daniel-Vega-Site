@@ -4,9 +4,12 @@
     <v-content>
       <v-container fluid>
         <v-layout class="pa-4">
-          <h1>{{ $page.frontmatter.title }}</h1>
           <Content />
-          <Work class="work section" v-for="work in works" :key="event.title"  />
+        </v-layout>
+        <v-layout class="pa-2" align-center justify-space-around row fill-height>
+          <v-flex v-for="w in works" :key="w.title" xs12 md4>
+            <Work class="work section" v-bind="w" />
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -22,9 +25,9 @@ export default {
   },
   computed: {
       works() {
-          return this.$site.pages
-              .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
-              .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+        return this.$site.pages
+          .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
+          .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
       }
   }
 };
