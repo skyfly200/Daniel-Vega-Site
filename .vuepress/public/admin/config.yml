@@ -6,10 +6,12 @@ backend:
 public_folder: ".vuepress/dist/"
 media_folder: ".vuepress/dist/assets/img"
 
+display_url: https://daniel-vega.netlify.com
+
 collections:
   - name: "page"
     label: "Pages"
-    folder: "pages"
+    folder: "./"
     create: true
     slug: "{{slug}}"
     fields:
