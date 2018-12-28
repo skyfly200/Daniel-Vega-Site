@@ -9,16 +9,6 @@ media_folder: ".vuepress/dist/assets/img"
 display_url: https://daniel-vega.netlify.com
 
 collections:
-  - name: "landing"
-    label: "Home"
-    files:
-      - label: "Home"
-        name: "home"
-        file: "README.md"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Menu Icon", name: "menuIcon", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     folder: "./"
