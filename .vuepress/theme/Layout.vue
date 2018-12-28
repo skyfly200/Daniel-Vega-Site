@@ -5,7 +5,7 @@
     <Listen v-else-if="isListen" />
     <Events v-else-if="isEvents" />
     <EventPage v-else-if="isEvent" />
-    <Work v-else-if="isWork" />
+    <WorkPage v-else-if="isWork" />
     <Base v-else/>
     <v-footer app>
       <span>&copy; Daniel Vega {{ copyrightYear }}</span>
