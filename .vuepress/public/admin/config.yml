@@ -11,7 +11,7 @@ display_url: https://daniel-vega.netlify.com
 collections:
   - name: "page"
     label: "Pages"
-    folder: "pages"
+    folder: "./"
     create: true
     slug: "{{slug}}"
     fields:
