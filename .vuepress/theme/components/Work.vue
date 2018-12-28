@@ -5,8 +5,8 @@
   </v-card>
 </template>
 <script>
-import Audio from './components/Audio';
-import Video from './components/Video';
+import Audio from './Audio';
+import Video from './Video';
 export default {
   components: {
     Audio,

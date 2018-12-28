@@ -17,7 +17,7 @@
   import Contact from './Contact';
   import Events from './Events';
   import Listen from './Listen';
-  import EventPage from './Event';
+  import EventPage from './EventPage';
   import WorkPage from './WorkPage';
   import Base from './Base';
   export default {
