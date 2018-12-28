@@ -4,7 +4,7 @@
     <v-content>
       <v-container fluid>
         <v-layout class="pa-4">
-          <Event />
+          <EventItem />
         </v-layout>
       </v-container>
     </v-content>
