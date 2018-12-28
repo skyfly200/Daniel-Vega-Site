@@ -2,6 +2,7 @@
 title: "Home"
 parallaxHeader: "Parallax Title"
 parallaxContent: "Parallax Content"
+menuIcon: "home"
 ---
 
 # Welcome

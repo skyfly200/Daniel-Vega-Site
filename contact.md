@@ -1,6 +1,7 @@
 ---
 pageClass: "contact"
 title: "Contact"
+menuIcon: "email"
 ---
 
 # Get in touch!

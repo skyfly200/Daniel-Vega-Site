@@ -6,7 +6,7 @@
           v-for="page in menuPages"
           :key="page.title"
           :href="page.path">
-            <v-list-tile-action>
+            <v-list-tile-action v-if="page.frontmatter.menuIcon">
               <v-icon> {{ page.frontmatter.menuIcon }} </v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
