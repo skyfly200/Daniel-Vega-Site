@@ -3,9 +3,9 @@
     <Home v-if="isHome"/>
     <Contact v-else-if="isContact"/>
     <Listen v-else-if="isListen" />
+    <WorkPage v-else-if="isWork" />
     <Events v-else-if="isEvents" />
     <EventPage v-else-if="isEvent" />
-    <WorkPage v-else-if="isWork" />
     <Base v-else/>
     <v-footer app>
       <span>&copy; Daniel Vega {{ copyrightYear }}</span>
@@ -41,11 +41,11 @@
           },
           isListen() {
             const {path} = this.$page;
-            return path === "/listen.html";
+            return path === "/works/";
           },
           isEvents() {
             const {path} = this.$page;
-            return path === "/events.html";
+            return path === "/events/";
           },
           isEvent() {
             const {path} = this.$page;
