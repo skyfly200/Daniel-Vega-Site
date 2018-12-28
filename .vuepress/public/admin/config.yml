@@ -22,7 +22,6 @@ collections:
   - name: "sample"
     label: "Samples"
     folder: "sample"
-    create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
