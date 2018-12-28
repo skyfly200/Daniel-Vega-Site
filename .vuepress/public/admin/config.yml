@@ -11,9 +11,10 @@ display_url: https://daniel-vega.netlify.com
 collections:
   - name: "page"
     label: "Pages"
-    folder: "./"
+    folder: "pages"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Hide In Menu", name: "hideInMenu", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
