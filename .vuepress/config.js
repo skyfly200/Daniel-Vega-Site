@@ -26,17 +26,35 @@ module.exports = {
         search: false,
         docsDir: 'docs',
         nav: [{
-                text: 'Start',
-                link: '/docs/',
+                text: 'Home',
+                link: '/',
+                icon: 'home'
             },
             {
-                text: 'Test',
-                link: '/pages/test.html',
+                text: 'Bio',
+                link: '/bio.html',
+                icon: 'home'
             },
             {
-                text: 'NetlifyCMS Config Help',
-                link: '/docs/netlifycms-configuration.html',
-            }
+                text: 'Listen',
+                link: '/works/',
+                icon: 'home'
+            },
+            {
+                text: 'Events',
+                link: '/events/',
+                icon: 'home'
+            },
+            {
+                text: 'Blog',
+                link: '/posts/',
+                icon: 'home'
+            },
+            {
+                text: 'Contact',
+                link: '/contact.html',
+                icon: 'home'
+            },
         ],
         serviceWorker: {
           updatePopup: true
