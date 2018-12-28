@@ -66,6 +66,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Type", name: "workType", widget: "select", options: ["audio", "video"]}
+      - {label: "File", name: "file", widget: "file"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "events"
     label: "Events"
@@ -74,4 +76,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Event Url", name: "url", widget: "string"}
+      - {label: "Group", name: "group", widget: "string"}
+      - {label: "Group Url", name: "groupUrl", widget: "string"}
+      - {label: "Venue", name: "venue", widget: "string"}
+      - {label: "Venue Url", name: "venueUrl", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Date and Time", name: "datetime", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
