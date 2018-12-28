@@ -6,7 +6,7 @@
         <v-layout class="pa-4">
           <h1>{{ $page.frontmatter.title }}</h1>
           <Content />
-          <EventItem class="event section" v-for="event in events" />
+          <EventItem class="event section" v-for="event in events" :key="event.title" />
         </v-layout>
       </v-container>
     </v-content>

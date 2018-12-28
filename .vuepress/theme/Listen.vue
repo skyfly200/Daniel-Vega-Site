@@ -6,7 +6,7 @@
         <v-layout class="pa-4">
           <h1>{{ $page.frontmatter.title }}</h1>
           <Content />
-          <Work class="work section" v-for="work in works" />
+          <Work class="work section" v-for="work in works" :key="event.title"  />
         </v-layout>
       </v-container>
     </v-content>
