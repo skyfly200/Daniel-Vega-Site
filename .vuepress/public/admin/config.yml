@@ -38,9 +38,16 @@ collections:
           - {label: "Phone", name: "phone", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Events"
+        name: "events"
+        file: "events.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Menu Icon", name: "menuIcon", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: "Listen"
-        name: "Listen"
-        file: "Listen.md"
+        name: "listen"
+        file: "listen.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Menu Icon", name: "menuIcon", widget: "string"}
