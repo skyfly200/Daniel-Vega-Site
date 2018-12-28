@@ -9,8 +9,8 @@ media_folder: ".vuepress/dist/assets/img"
 display_url: https://daniel-vega.netlify.com
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "landing"
+    label: "Home"
     files:
       - label: "Home"
         name: "home"
@@ -19,6 +19,15 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Menu Icon", name: "menuIcon", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    folder: "pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Hide In Menu", name: "hideInMenu", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "sample"
     label: "Samples"
     folder: "sample"
