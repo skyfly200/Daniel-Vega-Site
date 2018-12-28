@@ -10,7 +10,7 @@ display_url: https://daniel-vega.netlify.com
 
 collections:
   - name: "pages"
-    label: "Set Pages"
+    label: "Pages"
     files:
       - label: "Home"
         name: "home"
@@ -62,6 +62,14 @@ collections:
   - name: "works"
     label: "Works"
     folder: "works"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "events"
+    label: "Events"
+    folder: "events"
     create: true
     slug: "{{slug}}"
     fields:
