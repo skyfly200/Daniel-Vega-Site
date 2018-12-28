@@ -2,7 +2,7 @@
   <div class="base-layout">
     <v-content>
       <v-container fluid>
-        <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+        <v-parallax :src="$page.frontmatter.parallaxImage">
           <div class="paralax-content">
             <h1> {{ $page.frontmatter.parallaxHeader }} </h1>
             <p> {{ $page.frontmatter.parallaxContent }} </p>
