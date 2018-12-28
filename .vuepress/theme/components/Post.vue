@@ -3,7 +3,7 @@
     <a :href="path">
       <h1> {{ title }} </h1>
     </a>
-    {{ frontmatter.body }}
+    <slot></slot>
   </v-card>
 </template>
 <script>

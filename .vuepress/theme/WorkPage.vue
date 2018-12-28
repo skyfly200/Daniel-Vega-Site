@@ -1,10 +1,12 @@
 <template>
-  <div class="base-layout">
+  <div class="work-layout">
     <Nav />
     <v-content>
       <v-container fluid>
         <v-layout class="pa-4" align-center justify-center fill-height>
-          <Work :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path" />
+          <Work :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path">
+            <Content />
+          </Work>
         </v-layout>
       </v-container>
     </v-content>

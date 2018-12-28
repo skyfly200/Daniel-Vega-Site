@@ -7,7 +7,7 @@
           <Content />
         </v-layout>
         <v-layout class="pa-2" align-center justify-space-around row fill-height>
-          <v-flex v-for="p in posts" :key="p.title" xs12 md4>
+          <v-flex v-for="p in posts" :key="p.title" xs12 md6>
             <Post class="event section" v-bind="p" />
           </v-flex>
         </v-layout>
