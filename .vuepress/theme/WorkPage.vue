@@ -3,7 +3,7 @@
     <Nav />
     <v-content>
       <v-container fluid>
-        <v-layout class="pa-4">
+        <v-layout class="pa-4" align-center justify-center fill-height>
           <Work :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path" />
         </v-layout>
       </v-container>
