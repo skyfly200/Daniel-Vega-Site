@@ -5,10 +5,10 @@
             <Content />
         </div>
         <div class="articles">
-            <article class="post section" v-for="post in posts">
-                <h2 class="subtitle is-4">{{ post.title }}</h2>
-                <p>{{ post.frontmatter.excerpt }}</p>
-                <a :href="post.path">Read More →</a>
+            <article class="work section" v-for="work in works">
+                <h2 class="subtitle is-4">{{ work.title }}</h2>
+                <p>{{ work.frontmatter.excerpt }}</p>
+                <a :href="work.path">Read More →</a>
             </article>
         </div>
     </div>
@@ -16,7 +16,7 @@
 <script>
 export default {
     computed: {
-        posts() {
+        works() {
             return this.$site.pages
                 .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
                 .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
