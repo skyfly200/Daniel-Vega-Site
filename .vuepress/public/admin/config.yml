@@ -10,22 +10,47 @@ display_url: https://daniel-vega.netlify.com
 
 collections:
   - name: "pages"
-    label: "Pages"
-    folder: "./"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Menu Icon", name: "menuIcon", widget: "string"}
-      - {label: "Hide In Menu", name: "hideInMenu", widget: "boolean", default: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+    label: "Set Pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "README.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Menu Icon", name: "menuIcon", widget: "string"}
+          - {label: "Parallax Image", name: "parallaxImage", widget: "file"}
+          - {label: "Parallax Header", name: "parallaxHeader", widget: "string"}
+          - {label: "Parallax Content", name: "parallaxContent", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Bio"
+        name: "bio"
+        file: "bio.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Menu Icon", name: "menuIcon", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Contact"
+        name: "contact"
+        file: "contact.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Menu Icon", name: "menuIcon", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Listen"
+        name: "Listen"
+        file: "Listen.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Menu Icon", name: "menuIcon", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "sample"
     label: "Samples"
     folder: "sample"
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Hide In Menu", name: "hideInMenu", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "works"
     label: "Works"

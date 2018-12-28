@@ -4,6 +4,9 @@
     <v-content>
       <v-container fluid>
         <v-card class="pa-4 ma-4">
+          <h2> {{ $page.frontmatter.contactBlurb }} </h2>
+          <h2> {{ $page.frontmatter.phone }} </h2>
+          <h2> {{ $page.frontmatter.email }} </h2>
           <Content />
         </v-card>
         <v-card class="pa-4 ma-4">
