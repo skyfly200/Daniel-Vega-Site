@@ -1,9 +1,7 @@
 ---
-title: "Audio Player"
-workType: "audio"
-file: ""
-description:
-  you can have a short post description here
+title: Audio Player
+workType: audio
+file: /.vuepress/dist/04-eat-that-question.ogg
 ---
 
 show off your audio files with an HTML5 audio player
