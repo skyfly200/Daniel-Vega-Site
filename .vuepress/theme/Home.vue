@@ -11,9 +11,9 @@
         <v-layout>
           <v-btn flat
             v-for="page in menuPages"
-            :key="page.title"
-            :href="page.path">
-              {{ page.title }}
+            :key="page.text"
+            :to="page.link">
+              {{ page.text}}
           </v-btn>
         </v-layout>
         <v-layout class="pa-4">
@@ -27,9 +27,8 @@
 export default {
   computed: {
       menuPages() {
-        let pages = this.$site.pages;
-        pages = pages.filter(page => !page.frontmatter.hideInMenu);
-        return pages;
+        let pages = this.$site.themeConfig.nav || [];
+        return pages.filter(p => p.title !== "home");
       }
   }
 };

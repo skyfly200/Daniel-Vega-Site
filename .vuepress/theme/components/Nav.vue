@@ -5,7 +5,7 @@
         <v-list-tile
           v-for="page in menuPages"
           :key="page.text"
-          :href="page.link">
+          :to="page.link">
             <v-list-tile-action v-if="page.icon">
               <v-icon> {{ page.icon }} </v-icon>
             </v-list-tile-action>
@@ -25,7 +25,7 @@
         <v-btn flat
           v-for="page in menuPages"
           :key="page.text"
-          :href="page.link">
+          :to="page.link">
             {{ page.text }}
         </v-btn>
       </v-toolbar-items>
