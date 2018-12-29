@@ -9,7 +9,7 @@
         <v-layout class="pa-4">
           <Content />
         </v-layout>
-        <v-layout class="pa-2" align-center justify-space-around row fill-height>
+        <v-layout class="pa-2" align-center justify-left row fill-height>
           <v-flex v-for="p in posts" :key="p.title" xs12 md6>
             <Post :frontmatter="p.frontmatter" :title="p.title" :path="p.path" feature="true" md12 >
               <p> {{ p.frontmatter.description }} </p>

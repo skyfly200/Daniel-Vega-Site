@@ -1,5 +1,5 @@
 <template>
-  <video width="320" height="240" controls :src="frontmatter.file">
+  <video controls :src="frontmatter.file">
     Your browser does not support the video tag.
     <a :href="frontmatter.file">Here is a link to the file.</a>
   </video>
@@ -10,4 +10,8 @@ export default {
 };
 </script>
 <style>
+  video {
+    width: 100% !important;
+    height: auto !important;
+  }
 </style>

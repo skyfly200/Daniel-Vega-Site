@@ -9,7 +9,7 @@
         <v-layout class="pa-4">
           <Content />
         </v-layout>
-        <v-layout class="pa-2" align-center justify-space-around row fill-height>
+        <v-layout class="pa-2" align-center justify-left row fill-height>
           <v-flex v-for="e in events" :key="e.title" xs12 md6>
             <EventItem class="work section ma-2" feature="true" v-bind="e">
               <p> {{ e.frontmatter.description }} </p>

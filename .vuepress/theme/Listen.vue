@@ -9,7 +9,7 @@
         <v-layout class="pa-4">
           <Content />
         </v-layout>
-        <v-layout class="pa-2" justify-space-around row wrap fill-height>
+        <v-layout class="pa-2" justify-left row wrap fill-height>
           <v-flex v-for="w in works" :key="w.title" xs12 md6>
             <Work class="work section ma-2" feature="true" v-bind="w">
               <p> {{ w.frontmatter.description }} </p>

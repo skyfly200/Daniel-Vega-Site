@@ -1,8 +1,9 @@
 <template>
-  <v-card class="pa-4">
+  <v-card>
     <v-card-title>
       <h1> {{ frontmatter.title }} </h1>
     </v-card-title>
+    <v-divider light></v-divider>
     <v-card-text>
       <Audio v-if="frontmatter.workType === 'audio'" :frontmatter="frontmatter"/>
       <Video v-if="frontmatter.workType === 'video'" :frontmatter="frontmatter"/>
