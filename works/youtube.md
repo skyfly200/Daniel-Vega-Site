@@ -2,7 +2,7 @@
 title: "YouTube Player"
 workType: "youtube"
 url:
-  https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG
+  https://www.youtube.com/watch?v=hHW1oY26kxQ&t=18000s
 description:
   you can have a short post description here
 ---
