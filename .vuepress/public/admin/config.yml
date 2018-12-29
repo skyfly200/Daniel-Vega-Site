@@ -3,8 +3,8 @@ backend:
   repo: skyfly200/Daniel-Vega-Site
   branch: master
 
-public_folder: ".vuepress/dist"
-media_folder: "/assets"
+public_folder: "/assets"
+media_folder: ".vuepress/dist"
 publish_mode: editorial_workflow
 display_url: https://daniel-vega.netlify.com
 
