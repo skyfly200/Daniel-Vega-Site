@@ -4,9 +4,11 @@
     <v-content>
       <v-container fluid>
         <v-layout class="pa-4" align-center justify-center fill-height>
-          <Work :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path">
-            <Content />
-          </Work>
+          <v-flex xs12 md10>
+            <Work :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path">
+              <Content />
+            </Work>
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
