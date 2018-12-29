@@ -4,7 +4,7 @@
     <v-content>
       <v-container fluid>
         <v-layout class="pa-4" align-center justify-center fill-height>
-          <EventItem :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path">
+          <EventItem :frontmatter="$page.frontmatter" :path="$page.path">
             <Content />
           </EventItem>
         </v-layout>

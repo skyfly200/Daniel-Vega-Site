@@ -4,7 +4,7 @@
     <v-content>
       <v-container fluid>
         <v-layout class="pa-4" align-center justify-center fill-height>
-          <Post :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path">
+          <Post :frontmatter="$page.frontmatter" :title="$page.title" :path="$page.path" md12 >
             <Content />
           </Post>
         </v-layout>

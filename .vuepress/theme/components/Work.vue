@@ -1,18 +1,23 @@
 <template>
   <v-card class="pa-4">
-    <a :href="path">
-      <h1> {{ title }} </h1>
-    </a>
-    <slot></slot>
-    <Audio v-if="frontmatter.workType === 'audio'" :frontmatter="frontmatter"/>
-    <Video v-if="frontmatter.workType === 'video'" :frontmatter="frontmatter"/>
+    <v-card-title>
+      <h1> {{ frontmatter.title }} </h1>
+    </v-card-title>
+    <v-card-text>
+      <Audio v-if="frontmatter.workType === 'audio'" :frontmatter="frontmatter"/>
+      <Video v-if="frontmatter.workType === 'video'" :frontmatter="frontmatter"/>
+      <slot></slot>
+    </v-card-text>
+    <v-card-actions v-if="feature">
+      <v-btn :to="path" flat >Read More</v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 <script>
 import Audio from './Audio';
 import Video from './Video';
 export default {
-  props: ["frontmatter", "path", "title"],
+  props: ["frontmatter", "path", "feature"],
   components: {
     Audio,
     Video

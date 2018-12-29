@@ -2,13 +2,15 @@
   <div class="base-layout">
     <Nav />
     <v-content>
-      <v-container fluid>
+      <v-container fluid grid-list-md>
         <v-layout class="pa-4">
           <Content />
         </v-layout>
-        <v-layout class="pa-2" align-center justify-space-around row fill-height>
-          <v-flex v-for="w in works" :key="w.title" xs12 md4>
-            <Work class="work section" v-bind="w" />
+        <v-layout class="pa-2" justify-space-around row wrap fill-height>
+          <v-flex v-for="w in works" :key="w.title" xs12 md6>
+            <Work class="work section ma-2" feature="true" v-bind="w">
+              <p> {{ w.frontmatter.description }} </p>
+            </Work>
           </v-flex>
         </v-layout>
       </v-container>

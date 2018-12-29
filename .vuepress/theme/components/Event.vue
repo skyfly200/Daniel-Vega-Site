@@ -1,14 +1,20 @@
 <template>
-  <v-card class="pa-4">
-    <a :href="path">
-      <h1> {{ title }} </h1>
-    </a>
-    <slot></slot>
+  <v-card>
+    <v-img v-if="frontmatter.image" :src="$withBase(frontmatter.image)" alt="" height="200px" class="white--text" />
+    <v-card-title>
+      <h1> {{ frontmatter.title }} </h1>
+    </v-card-title>
+    <v-card-text>
+      <slot></slot>
+    </v-card-text>
+    <v-card-actions v-if="feature">
+      <v-btn :to="path" flat color="blue">Read More</v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 <script>
 export default {
-  props: ["frontmatter", "title", "path"]
+  props: ["frontmatter", "feature", "path"]
 };
 </script>
 <style>

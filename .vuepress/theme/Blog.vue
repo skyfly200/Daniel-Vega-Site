@@ -8,7 +8,9 @@
         </v-layout>
         <v-layout class="pa-2" align-center justify-space-around row fill-height>
           <v-flex v-for="p in posts" :key="p.title" xs12 md6>
-            <Post class="event section" v-bind="p" />
+            <Post :frontmatter="p.frontmatter" :title="p.title" :path="p.path" feature="true" md12 >
+              <p> {{ p.frontmatter.description }} </p>
+            </Post>
           </v-flex>
         </v-layout>
       </v-container>
@@ -25,9 +27,10 @@ export default {
   },
   computed: {
       posts() {
-        return this.$site.pages
+        let posts = this.$site.pages
           .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
           .sort((a, b) => Date.parse(b.frontmatter.datetime) - Date.parse(a.frontmatter.datetime));
+        return posts;
       }
   }
 };

@@ -4,7 +4,7 @@ backend:
   branch: master
 
 public_folder: ".vuepress/dist/"
-media_folder: ".vuepress/dist/assets/img"
+media_folder: ".vuepress/dist/assets"
 
 display_url: https://daniel-vega.netlify.com
 
@@ -79,4 +79,5 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
