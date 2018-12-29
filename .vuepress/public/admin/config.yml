@@ -3,9 +3,9 @@ backend:
   repo: skyfly200/Daniel-Vega-Site
   branch: master
 
-public_folder: ".vuepress/dist/"
-media_folder: ".vuepress/dist/assets"
-
+public_folder: ".vuepress/dist/assets"
+media_folder: "/assets"
+publish_mode: editorial_workflow
 display_url: https://daniel-vega.netlify.com
 
 collections:
