@@ -1,6 +1,6 @@
 ---
 title: Test Event
-url: https://google.com/?q=Carnegie%20Hall
+url: null
 image: https://cdn.vuetifyjs.com/images/cards/docks.jpg
 group: Random Music Group
 groupUrl: null
