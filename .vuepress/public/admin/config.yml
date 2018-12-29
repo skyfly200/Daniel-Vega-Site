@@ -53,8 +53,11 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Type", name: "workType", widget: "select", options: ["audio", "video", "youtube"]}
-      - {label: "File", name: "file", widget: "file"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "File", name: "file", widget: "file", optional: true}
+      - {label: "ID", name: "id", widget: "string", optional: true}
+      - {label: "Is a Playlist", name: "playlist", widget: "boolean"}
+      - {label: "Embed Code", name: "raw", widget: "string", optional: true}
+      - {label: "Body", name: "body", widget: "markdown", optional: true}
   - name: "events"
     label: "Events"
     folder: "events"

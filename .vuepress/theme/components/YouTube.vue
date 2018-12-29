@@ -1,11 +1,20 @@
 <template>
   <div class="videoWrapper">
-    <iframe width="560" height="349" :src="frontmatter.url" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe v-if="!frontmatter.raw" :src="videoUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <span v-else v-html="frontmatter.raw"></span>
   </div>
 </template>
 <script>
 export default {
-  props: ["frontmatter"]
+  props: ["frontmatter"],
+  computed: {
+    videoUrl: function() {
+      let pl = "videoseries?list=";
+      let root = "https://www.youtube.com/embed/";
+      if (this.frontmatter.playlist) root += pl;
+      return root + this.frontmatter.id;
+    }
+  }
 };
 </script>
 <style>

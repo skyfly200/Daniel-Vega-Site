@@ -1,8 +1,8 @@
 ---
-title: "YouTube Video"
-workType: "youtube"
-id: hHW1oY26kxQ
-playlist: false
+title: YouTube Playlist
+workType: youtube
+id: PLNnhRQejVv00HCx9yBo8677LJ3CONPCBY
+playlist: true
 raw: false
 description:
   you can have a short post description here
