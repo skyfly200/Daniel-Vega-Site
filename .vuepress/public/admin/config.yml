@@ -4,7 +4,7 @@ backend:
   branch: master
 
 public_folder: "/assets"
-media_folder: ".vuepress/dist"
+media_folder: ".vuepress/public/assets"
 publish_mode: editorial_workflow
 display_url: https://daniel-vega.netlify.com
 
