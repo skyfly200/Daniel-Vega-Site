@@ -52,12 +52,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Type", name: "workType", widget: "select", options: ["audio", "video", "youtube"]}
-      - {label: "File", name: "file", widget: "file", optional: true}
-      - {label: "ID", name: "id", widget: "string", optional: true}
-      - {label: "Is a Playlist", name: "playlist", widget: "boolean"}
-      - {label: "Embed Code", name: "raw", widget: "string", optional: true}
-      - {label: "Body", name: "body", widget: "markdown", optional: true}
+      - {label: "Type", name: "workType", widget: "select", options: ["", "audio", "video", "youtube"]}
+      - {label: "File", name: "file", widget: "file", required: false}
+      - {label: "ID", name: "id", widget: "string", required: false}
+      - {label: "Is a Playlist", name: "playlist", widget: "boolean", required: false}
+      - {label: "Embed Code", name: "raw", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "events"
     label: "Events"
     folder: "events"
@@ -65,12 +65,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Event Url", name: "url", widget: "string"}
-      - {label: "Group", name: "group", widget: "string"}
-      - {label: "Group Url", name: "groupUrl", widget: "string"}
-      - {label: "Venue", name: "venue", widget: "string"}
-      - {label: "Venue Url", name: "venueUrl", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Event Url", name: "url", widget: "string", required: false}
+      - {label: "Group", name: "group", widget: "string", required: false}
+      - {label: "Group Url", name: "groupUrl", widget: "string", required: false}
+      - {label: "Venue", name: "venue", widget: "string", required: false}
+      - {label: "Venue Url", name: "venueUrl", widget: "string", required: false}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Date and Time", name: "datetime", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -81,6 +81,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
