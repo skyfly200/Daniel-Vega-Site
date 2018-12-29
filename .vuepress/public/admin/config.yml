@@ -52,7 +52,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Type", name: "workType", widget: "select", options: ["audio", "video"]}
+      - {label: "Type", name: "workType", widget: "select", options: ["audio", "video", "youtube"]}
       - {label: "File", name: "file", widget: "file"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "events"
