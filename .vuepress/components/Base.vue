@@ -11,7 +11,7 @@
   </div>
 </template>
 <script>
-import Nav from "./components/Nav"
+import Nav from "./Nav"
 export default {
   components: {
     Nav

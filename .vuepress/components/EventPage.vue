@@ -15,8 +15,8 @@
   </div>
 </template>
 <script>
-import Nav from "./components/Nav"
-import EventItem from "./components/Event"
+import Nav from "./Nav"
+import EventItem from "./Event"
 export default {
   components: {
     Nav,
