@@ -20,11 +20,18 @@ module.exports = {
         ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
+    plugins: [
+      [
+        '@vuepress/google-analytics',
+        { ga: '' }
+      ]
+    ],
     serviceWorker: true,
     host: 'localhost',
     themeConfig: {
         search: false,
-        docsDir: 'docs',
+        repo: 'skyfly200/Daniel-Vega-Site',
+        lastUpdated: 'Last Updated', // string | boolean
         nav: [{
                 text: 'Home',
                 link: '/',
