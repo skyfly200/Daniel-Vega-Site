@@ -26,6 +26,13 @@ module.exports = {
         { ga: '' }
       ]
     ],
+    configureWebpack: (config, isServer) => {
+      if (!isServer) {
+        config.devServer = {
+            hot: false
+        };
+      }
+    },
     serviceWorker: true,
     host: 'localhost',
     themeConfig: {
